@@ -1,0 +1,124 @@
+name: Bug Report
+description: Report a problem with the school activities system
+title: "[Bug]: "
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping us improve the system! Please describe the problem you encountered.
+        
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: What went wrong?
+      description: Clearly describe the problem you encountered
+      placeholder: e.g., Students can't register for activities, wrong schedule is showing, login not working
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: How to reproduce the problem
+      description: List the exact steps someone else could follow to see the same problem
+      placeholder: |
+        1. Go to the website
+        2. Click on...
+        3. Try to...
+        4. See error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: What should have happened instead?
+      description: Describe what you expected to happen
+      placeholder: e.g., Student should be successfully registered, schedule should show correct times
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-area
+    attributes:
+      label: Which part of the system has the problem?
+      description: Select the area where the bug occurs
+      options:
+        - Student registration process
+        - Activity listings/display
+        - Search and filtering
+        - Teacher login
+        - Activity schedule display
+        - Website loading/performance
+        - Mobile device display
+        - Other (describe below)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does this happen?
+      options:
+        - Always (every time)
+        - Often (most of the time)
+        - Sometimes (occasionally)  
+        - Rarely (only once or twice)
+        - Not sure
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: How urgent is this problem?
+      options:
+        - Critical (system completely broken, affects all users)
+        - High (major feature not working, affects many users)
+        - Medium (minor issue, workaround exists)
+        - Low (cosmetic issue, doesn't affect functionality)
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected-users
+    attributes:
+      label: Who is affected by this problem?
+      description: Which users are experiencing this issue?
+      placeholder: e.g., All students, Students trying to register for Chess Club, Teachers, etc.
+
+  - type: textarea
+    id: error-messages
+    attributes:
+      label: Any error messages or unusual behavior?
+      description: Include any error messages you saw or describe any unusual behavior
+      placeholder: Copy and paste exact error messages if you see any
+
+  - type: input
+    id: when-started
+    attributes:
+      label: When did this problem start?
+      description: When did you first notice this issue?
+      placeholder: e.g., Today, Last week, This morning
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Information
+      description: Any other details that might help solve this problem?
+      placeholder: Include browser type, device type, time of day, or any other relevant details
+
+  - type: checkboxes
+    id: acceptance-criteria
+    attributes:
+      label: How will we know this is fixed?
+      description: Check what should work when this bug is resolved
+      options:
+        - label: The problem no longer occurs when following the same steps
+          required: true
+        - label: The system behaves as expected in the affected area
+          required: true
+        - label: No error messages appear in normal usage
+          required: true
+        - label: All affected users can use the system normally
+          required: true

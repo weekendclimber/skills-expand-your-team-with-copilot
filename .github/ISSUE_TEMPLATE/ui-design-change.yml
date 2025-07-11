@@ -1,0 +1,125 @@
+name: UI/Design Change Request
+description: Request changes to how the website looks or works for users
+title: "[UI/Design]: "
+labels: ["enhancement", "ui", "design"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to request changes to the website's appearance, layout, or user experience.
+        
+  - type: dropdown
+    id: change-area
+    attributes:
+      label: Which part of the website needs design changes?
+      options:
+        - Main activities page
+        - Activity search and filtering
+        - Student registration form
+        - Teacher login area
+        - Mobile device display
+        - Overall website colors/theme
+        - Navigation and menus
+        - Activity detail display
+        - Entire website redesign
+        - Other (describe below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-problem
+    attributes:
+      label: What's wrong with how it currently looks or works?
+      description: Describe the current design issue or problem
+      placeholder: e.g., Text is too small, buttons are hard to find, layout is confusing on phones, colors are hard to read
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-change
+    attributes:
+      label: How would you like it to look or work instead?
+      description: Describe your vision for the improved design
+      placeholder: e.g., Make buttons bigger and more colorful, reorganize the layout, change color scheme, improve mobile display
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority-reason
+    attributes:
+      label: Why is this change important?
+      options:
+        - Makes it easier for students to use
+        - Improves accessibility for users with disabilities
+        - Fixes problems on mobile devices
+        - Makes the website look more professional
+        - Aligns with school branding/colors
+        - Solves a frequently reported user problem
+        - Other (explain below)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: affected-users
+    attributes:
+      label: Who will benefit from this change?
+      options:
+        - label: Students using the website
+        - label: Teachers managing activities
+        - label: Parents viewing activities
+        - label: School administrators
+        - label: Users on mobile devices
+        - label: Users with accessibility needs
+
+  - type: textarea
+    id: design-inspiration
+    attributes:
+      label: Design Ideas or Examples
+      description: Do you have examples of websites or designs you like? Or specific design elements you want?
+      placeholder: e.g., Link to websites with good design, specific colors (like school colors), font preferences, layout ideas
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: How important is this change?
+      options:
+        - Critical (affects usability significantly)
+        - High (would greatly improve user experience)
+        - Medium (nice improvement to have)
+        - Low (minor cosmetic enhancement)
+    validations:
+      required: true
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Any limitations or requirements?
+      description: Are there any restrictions or requirements for this design change?
+      placeholder: e.g., Must use school colors, needs to work on all devices, should be simple to maintain, budget constraints
+
+  - type: textarea
+    id: success-criteria
+    attributes:
+      label: How will we know this design change is successful?
+      description: What should we be able to see or test to confirm the change works well?
+      placeholder: e.g., Students can easily find and register for activities, website looks good on phones, colors are easier to read
+
+  - type: checkboxes
+    id: acceptance-criteria
+    attributes:
+      label: Implementation Requirements
+      description: Check what must be ensured when implementing this design change
+      options:
+        - label: Design works properly on desktop computers
+          required: true
+        - label: Design works properly on mobile devices
+          required: true
+        - label: All existing functionality still works after design changes
+          required: true
+        - label: Design is accessible (readable text, proper contrast, etc.)
+          required: true
+        - label: Teachers and administrators approve the new design
+          required: true
+        - label: Change doesn't break any existing features
+          required: true
