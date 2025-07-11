@@ -108,6 +108,13 @@ body:
       description: Any other details that might help solve this problem?
       placeholder: Include browser type, device type, time of day, or any other relevant details
 
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Technical Constraints or Limitations
+      description: Are there any known limitations that might affect fixing this bug?
+      placeholder: e.g., Cannot change during school hours, Must work on all devices, Budget constraints for fixes
+
   - type: checkboxes
     id: acceptance-criteria
     attributes:

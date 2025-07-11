@@ -70,3 +70,18 @@ body:
         - label: This might require coordination with other teachers
         - label: This is just informational - no changes needed
         - label: Not sure what actions are needed
+
+  - type: checkboxes
+    id: acceptance-criteria
+    attributes:
+      label: Success Criteria
+      description: How will we know this question/request has been successfully addressed?
+      options:
+        - label: Question is answered clearly and completely
+          required: true
+        - label: Any requested information is provided
+          required: true
+        - label: Follow-up actions are identified and assigned if needed
+          required: true
+        - label: Response addresses the underlying need
+          required: true
