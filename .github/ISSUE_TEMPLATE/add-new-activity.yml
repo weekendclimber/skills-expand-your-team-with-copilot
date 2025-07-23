@@ -1,0 +1,108 @@
+name: Add New Activity
+description: Request to add a new extracurricular activity to the system
+title: "[New Activity]: "
+labels: ["enhancement", "activity"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve our school activities system! Please fill out this form to request adding a new extracurricular activity.
+        
+  - type: input
+    id: activity-name
+    attributes:
+      label: Activity Name
+      description: What is the name of the new activity?
+      placeholder: e.g., Photography Club, Tennis Team, Science Fair
+    validations:
+      required: true
+
+  - type: textarea
+    id: activity-description
+    attributes:
+      label: Activity Description
+      description: Provide a detailed description of the activity
+      placeholder: Describe what students will do in this activity, what they'll learn, and what makes it special
+    validations:
+      required: true
+
+  - type: dropdown
+    id: activity-category
+    attributes:
+      label: Activity Category
+      description: What category does this activity belong to?
+      options:
+        - sports
+        - arts
+        - academic
+        - community
+        - technology
+        - other
+    validations:
+      required: true
+
+  - type: input
+    id: activity-days
+    attributes:
+      label: Meeting Days
+      description: Which days of the week will this activity meet?
+      placeholder: e.g., Monday, Wednesday, Friday or Tuesday, Thursday
+    validations:
+      required: true
+
+  - type: input
+    id: activity-time
+    attributes:
+      label: Meeting Time
+      description: What time will this activity meet?
+      placeholder: e.g., 3:15 PM - 4:45 PM or 7:00 AM - 8:00 AM
+    validations:
+      required: true
+
+  - type: input
+    id: max-participants
+    attributes:
+      label: Maximum Number of Participants
+      description: How many students can participate in this activity?
+      placeholder: e.g., 15, 20, 30
+    validations:
+      required: true
+
+  - type: textarea
+    id: special-requirements
+    attributes:
+      label: Special Requirements or Equipment
+      description: Does this activity need special equipment, rooms, or have any special requirements?
+      placeholder: e.g., Art supplies, gymnasium access, computer lab, outdoor space
+
+  - type: textarea
+    id: teacher-sponsor
+    attributes:
+      label: Teacher Sponsor Information
+      description: Who will be sponsoring/supervising this activity?
+      placeholder: Include teacher name and any relevant experience
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that would help implement this new activity?
+      placeholder: Include any deadlines, budget considerations, or other important details
+
+  - type: checkboxes
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Please check what should be included when implementing this activity
+      options:
+        - label: Activity should appear in the activities list on the website
+          required: true
+        - label: Students should be able to register for this activity
+          required: true
+        - label: Activity should be filterable by category and day
+          required: true
+        - label: Activity details should display correctly (description, schedule, max participants)
+          required: true
+        - label: Teachers should be able to see registered students for this activity
+          required: false # Optional because not all activities require teacher supervision or tracking of registered students

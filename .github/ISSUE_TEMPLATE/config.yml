@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Quick Help & Questions
+    url: https://github.com/weekendclimber/skills-expand-your-team-with-copilot/discussions
+    about: For questions about using the system or quick help requests
+  - name: Technical Documentation
+    url: https://github.com/weekendclimber/skills-expand-your-team-with-copilot/docs
+    about: View technical documentation for the system

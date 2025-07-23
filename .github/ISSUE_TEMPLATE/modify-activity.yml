@@ -1,0 +1,135 @@
+name: Modify Existing Activity
+description: Request changes to an existing extracurricular activity
+title: "[Modify Activity]: "
+labels: ["enhancement", "activity", "modification"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to request changes to an existing activity in our system.
+        
+  - type: dropdown
+    id: existing-activity
+    attributes:
+      label: Which Activity Needs Changes?
+      description: Select the activity you want to modify
+      options:
+        - Chess Club
+        - Programming Class  
+        - Morning Fitness
+        - Soccer Team
+        - Basketball Team
+        - Art Club
+        - Drama Club
+        - Math Club
+        - Debate Team
+        - Weekend Robotics Workshop
+        - Science Olympiad
+        - Sunday Chess Tournament
+        - Manga Maniacs
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: what-to-change
+    attributes:
+      label: What needs to be changed?
+      description: Check all that apply
+      options:
+        - label: Activity name
+        - label: Activity description
+        - label: Meeting schedule (days/times)
+        - label: Maximum number of participants
+        - label: Category classification
+        - label: Remove the activity entirely
+        - label: Other (explain below)
+
+  - type: textarea
+    id: new-name
+    attributes:
+      label: New Activity Name
+      description: If changing the name, what should the new name be?
+      placeholder: Leave blank if not changing the name
+
+  - type: textarea
+    id: new-description
+    attributes:
+      label: New Activity Description
+      description: If changing the description, provide the new description
+      placeholder: Leave blank if not changing the description
+
+  - type: input
+    id: new-days
+    attributes:
+      label: New Meeting Days
+      description: If changing the schedule, which days should it meet?
+      placeholder: e.g., Monday, Wednesday, Friday
+
+  - type: input
+    id: new-time
+    attributes:
+      label: New Meeting Time
+      description: If changing the time, what should the new time be?
+      placeholder: e.g., 3:15 PM - 4:45 PM
+
+  - type: input
+    id: new-max-participants
+    attributes:
+      label: New Maximum Participants
+      description: If changing the participant limit, what should the new limit be?
+      placeholder: e.g., 20
+
+  - type: dropdown
+    id: new-category
+    attributes:
+      label: New Category
+      description: If changing the category, what should the new category be?
+      options:
+        - "- Keep current category"
+        - sports
+        - arts
+        - academic
+        - community
+        - technology
+
+  - type: textarea
+    id: reason-for-change
+    attributes:
+      label: Reason for Changes
+      description: Why are these changes needed?
+      placeholder: Explain why these modifications are necessary
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-participants
+    attributes:
+      label: Impact on Current Participants
+      description: How will these changes affect students currently registered for this activity?
+      placeholder: Consider whether students need to be notified, if registration needs to be reset, etc.
+
+  - type: textarea
+    id: implementation-notes
+    attributes:
+      label: Implementation Notes
+      description: Any specific requirements or constraints for implementing these changes?
+      placeholder: Include deadlines, notification requirements, or other important considerations
+
+  - type: checkboxes
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Check what should be verified when implementing these changes
+      options:
+        - label: Changes are reflected on the website immediately
+          required: true
+        - label: Current participants remain registered (unless removing activity)
+          required: true
+        - label: New schedule/details are correctly displayed and filterable
+          required: true
+        - label: Students can still register if participant limit changed appropriately
+          required: true
+        - label: Teachers can verify the changes have been applied correctly
+          required: true

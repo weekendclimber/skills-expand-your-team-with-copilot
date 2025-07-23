@@ -1,0 +1,88 @@
+name: General Question or Simple Request
+description: Ask a question or make a simple request that doesn't fit other categories
+title: "[Question]: "
+labels: ["question"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for general questions, simple requests, or issues that don't fit the other categories.
+        
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: What type of request is this?
+      options:
+        - General question about the system
+        - Simple data update or correction
+        - Request for information or report
+        - Help with using the website
+        - Suggestion for improvement
+        - Administrative request
+        - Tell a dad joke
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question-description
+    attributes:
+      label: What is your question or request?
+      description: Please describe what you need help with or what you're asking about
+      placeholder: e.g., How do I see which students are registered for Chess Club? Can you update the meeting time for Drama Club? How many students are in each activity?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Provide any background information that would help us understand your request
+      placeholder: e.g., This is for planning purposes, Parent asked this question, Need this for a report
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: How urgent is this request?
+      options:
+        - Urgent (need response today)
+        - High (need response this week)
+        - Medium (need response when convenient)
+        - Low (no rush)
+    validations:
+      required: true
+
+  - type: textarea
+    id: preferred-response
+    attributes:
+      label: How would you like to receive the response?
+      description: How should we get back to you with the answer?
+      placeholder: e.g., Reply to this issue, Send email, Call the office, In person meeting
+
+  - type: checkboxes
+    id: follow-up
+    attributes:
+      label: Follow-up Actions
+      description: Check any actions that might be needed
+      options:
+        - label: This might require changes to the website
+        - label: This might need administrator approval
+        - label: This might require coordination with other teachers
+        - label: This is just informational - no changes needed
+        - label: Not sure what actions are needed
+
+  - type: checkboxes
+    id: acceptance-criteria
+    attributes:
+      label: Success Criteria
+      description: How will we know this question/request has been successfully addressed?
+      options:
+        - label: Question is answered clearly and completely
+          required: true
+        - label: Any requested information is provided
+          required: true
+        - label: Follow-up actions are identified and assigned if needed
+          required: true
+        - label: Response addresses the underlying need
+          required: true
