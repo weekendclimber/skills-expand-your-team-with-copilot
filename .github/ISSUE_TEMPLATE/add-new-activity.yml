@@ -105,4 +105,4 @@ body:
         - label: Activity details should display correctly (description, schedule, max participants)
           required: true
         - label: Teachers should be able to see registered students for this activity
-          required: false
+          required: false # Optional because not all activities require teacher supervision or tracking of registered students
