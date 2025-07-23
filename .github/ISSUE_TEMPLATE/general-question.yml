@@ -20,6 +20,7 @@ body:
         - Help with using the website
         - Suggestion for improvement
         - Administrative request
+        - Tell a dad joke
         - Other
     validations:
       required: true
