@@ -87,7 +87,7 @@ body:
       label: New Category
       description: If changing the category, what should the new category be?
       options:
-        - "" 
+        - "- Keep current category"
         - sports
         - arts
         - academic
